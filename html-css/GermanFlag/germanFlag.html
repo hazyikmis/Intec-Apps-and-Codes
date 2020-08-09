@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>German Flag</title>
+  </head>
+  <style>
+    .flag {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 75vw;
+      height: 60vw;
+    }
+
+    .part {
+      width: 75vw;
+      height: 20vw;
+    }
+
+    #bkpart {
+      background: black;
+    }
+
+    #ypart {
+      background: gold;
+    }
+
+    #rpart {
+      background: red;
+    }
+
+    .bol {
+      background-color: white;
+      height: 30vw;
+      width: 30vw;
+      border-radius: 50%;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: url("./img/beer.jpg");
+      /* background-repeat: round; */
+      /* background-size: 40vw; */
+      background-size: cover;
+      background-position: center;
+    }
+
+    @media screen and (min-width: 922px) {
+      #rpart {
+        height: 0;
+      }
+
+      .part {
+        height: 30vw;
+      }
+
+      .bol {
+        background-image: url(./img/sausage.jpg);
+        background-repeat: no-repeat;
+        border: 1rem dotted rgb(226, 15, 191);
+        /* outline-width: 1rem;
+        -moz-outline-radius: 3rem;
+        -webkit-outline-radius: 3rem;
+        outline-radius: 3rem;
+        outline-style: dotted;
+        outline-color: rgb(226, 15, 191); */
+        /* background-size: 40vw; */
+        background-size: 33vw;
+        background-position: center;
+      }
+    }
+  </style>
+
+  <body>
+    <div class="flag">
+      <div class="part" id="bkpart"></div>
+      <div class="part" id="rpart"></div>
+      <div class="part" id="ypart"></div>
+
+      <div class="bol"></div>
+    </div>
+  </body>
+</html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="Robots" content="NOINDEX " />
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .flag {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
+      width: 75vw;
+      height: 50vw;
+    }
+
+    .part {
+      width: 25vw;
+      height: 50vw;
+    }
+
+    #bkpart {
+      background: black;
+    }
+
+    #ypart {
+      background: gold;
+    }
+
+    #rpart {
+      background: red;
+    }
+
+    .bol {
+      height: 20vw;
+      width: 20vw;
+      border-radius: 50%;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: url(f.jpg);
+      background-repeat: no-repeat;
+      background-size: 20vw;
+    }
+
+    @media screen and (max-width: 700px) {
+      .bol {
+        background: url(m.jpg);
+        background-repeat: no-repeat;
+        background-size: 20vw;
+        /* background: white; */
+      }
+    }
+  </style>
+
+  <body>
+    <div class="flag">
+      <div class="part" id="bkpart"></div>
+      <div class="part" id="ypart"></div>
+      <div class="part" id="rpart"></div>
+
+      <div class="bol"></div>
+    </div>
+  </body>
+</html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="Robots" content="NOINDEX " />
+  </head>
+  <body></body>
+  <script type="text/javascript">
+    var gearPage = document.getElementById("GearPage");
+    if (null != gearPage) {
+      gearPage.parentNode.removeChild(gearPage);
+      document.title = "Error";
+    }
+  </script>
+</html>
