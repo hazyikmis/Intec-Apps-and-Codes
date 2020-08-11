@@ -71,6 +71,7 @@ nav {
     align-items: center;
     width: 50%;
     transform: translateX(100%); /* moves the menu out of the screen*/
+    transition: transform 0.5s ease-in;
   }
   .nav-links li {
     opacity: 0;
@@ -78,4 +79,8 @@ nav {
   .burger {
     display: block;
   }
+}
+
+.nav-active {
+  transform: translateX(0%);
 }
