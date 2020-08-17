@@ -1,3 +1,27 @@
+/*
+justifyContent - align items on primary/main axis
+If flexDirection is row, then primary axis is the horizontal axis, so items align horizontally;
+
+alignItems - align items in the row on the secondary axis, 
+If we continue with the same example above, since the primary axis is the horizontal axis, 
+secondary axis is the vertical axis; So items aligned vertically.
+BE CAREFUL: This alignment works in each row separately. I you have just 1 row, then all items
+seen at the center of the screen. But if you have 2 lines (because of the flexWrap: wrap) then
+all items move to the top of the screen. If you want to align all content in the center (or
+wherever you want) use alignContent
+
+alignContent - align whole content/items on the secondary axis,
+works only when flexWrap: "wrap", otherwise no effect
+
+flexBasis - if primary axis is horizontal axis then flexBasis means width
+otherwise it means height
+
+flexGrow - it is same to "flex" property, fills all the space
+
+flexShrink - opposite of flexGrow. If you specify a width (too much) and there is no much
+space left for other items, you can say that this item can shrink to open space for others.
+*/
+
 * {
   box-sizing: border-box;
   margin: 0;
