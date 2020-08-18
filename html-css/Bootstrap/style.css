@@ -166,6 +166,16 @@ hr.light-100 {
   margin-bottom: 1rem;
 }
 
+/*---Media Queries Template--*/
+/*
+@media (max-width: 992px) {
+}
+@media (max-width: 768px) {
+}
+@media (max-width: 576px) {
+}
+*/
+
 /*---Media Queries --*/
 @media (max-width: 992px) {
   .social a {

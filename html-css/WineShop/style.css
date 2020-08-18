@@ -14,6 +14,26 @@
   height: 8vh;
 }
 
+.top,
+.bottom {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.top-middle,
+.bottom-middle {
+  flex-grow: 1;
+}
+
+.top-left,
+.top-right,
+.bottom-left,
+.bottom-right {
+  width: 25%;
+}
+
 .menu-top {
   background-color: cadetblue;
   height: 20vh;
@@ -32,6 +52,52 @@
 }
 
 .menu div {
-  min-width: 300px;
+  /* min-width: 300px; */
   background-color: lightsalmon;
+  flex-grow: 1;
 }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .menu div {
+    min-width: 100%;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .menu div {
+    min-width: 100%;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .menu div {
+    min-width: 100%;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .menu div {
+    min-width: 50%;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .menu div {
+    min-width: 50%;
+  }
+}
+
+/*---Media Queries Template--*/
+/*
+@media (max-width: 992px) {
+}
+@media (max-width: 768px) {
+}
+@media (max-width: 576px) {
+}
+*/
