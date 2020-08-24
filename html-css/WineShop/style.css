@@ -25,6 +25,14 @@
 .top-middle,
 .bottom-middle {
   flex-grow: 1;
+  align-self: center;
+  text-align: center;
+}
+
+.top-middle {
+  font-family: 'Tangerine', cursive;
+  font-weight: 700;
+  font-size: 3rem;
 }
 
 .top-left,
@@ -34,9 +42,24 @@
   width: 25%;
 }
 
+.top-left,
+.bottom-left {
+  align-self: center;
+  text-align: left;
+}
+
+.top-right,
+.bottom-right {
+  align-self: center;
+  text-align: right;
+}
+
 .menu-top {
   background-color: cadetblue;
   height: 20vh;
+  align-self: center;
+  text-align: center;
+  background-image: url('./img/wineMenuImg.jpg');
 }
 
 .bottom {
@@ -51,16 +74,57 @@
   justify-content: space-between;
 }
 
-.menu div {
+.menu .wine-group {
   /* min-width: 300px; */
   background-color: lightsalmon;
   flex-grow: 1;
+}
+
+.product {
+  display: flex;
+  flex-direction: row;
+}
+
+.title {
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+}
+
+.brand {
+  flex: 5;
+  margin-left: 10px;
+}
+
+.price {
+  /* flex: 1; */
+  margin-right: 10px;
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+
+.order {
+  /* margin: 0 5px; */
+  display: inline-block;
+  width: 10px;
+  text-align: center;
+}
+
+.dec-btn,
+.inc-btn {
+  padding: 0 5px;
 }
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .menu div {
     min-width: 100%;
+  }
+  .top-middle {
+    font-size: 1.3rem;
+  }
+  .menu-top {
+    height: 10vh;
   }
 }
 
@@ -69,12 +133,24 @@
   .menu div {
     min-width: 100%;
   }
+  .top-middle {
+    font-size: 1.7rem;
+  }
+  .menu-top {
+    height: 12vh;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   .menu div {
     min-width: 100%;
+  }
+  .top-middle {
+    font-size: 2rem;
+  }
+  .menu-top {
+    height: 14vh;
   }
 }
 
@@ -83,12 +159,30 @@
   .menu div {
     min-width: 50%;
   }
+  .menu .sparkling {
+    max-width: 50%;
+  }
+  .top-middle {
+    font-size: 2.8rem;
+  }
+  .menu-top {
+    height: 17vh;
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   .menu div {
     min-width: 50%;
+  }
+  .menu .sparkling {
+    max-width: 50%;
+  }
+  .top-middle {
+    font-size: 3.5rem;
+  }
+  .menu-top {
+    height: 20vh;
   }
 }
 

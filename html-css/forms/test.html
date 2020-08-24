@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    .wineinput {
+      width: 50px;
+      opacity: 0.1;
+      color: black;
+      text-align: right;
+    }
+
+    .wineclass {
+      color: red;
+      font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+      cursor: pointer;
+      opacity: 0, 1;
+    }
+  </style>
+
+  <body>
+    <div>
+      <label
+        for="wineinput1"
+        class="wineclass"
+        type="button"
+        onclick="document.getElementById('wineinput1').style.opacity = '1'"
+      >
+        <input
+          onchange="bestelFunctie1()"
+          min="0"
+          max="5"
+          value="0"
+          class="wineinput"
+          id="wineinput1"
+          type="number"
+          placeholder="aantal flessen"
+        />
+        Bordeaux
+      </label>
+    </div>
+    <div>
+      <label
+        for="wineinput2"
+        class="wineclass"
+        type="button"
+        onclick="document.getElementById('wineinput2').style.opacity = '1'"
+      >
+        <input
+          onchange="bestelFunctie2()"
+          min="0"
+          max="5"
+          value=""
+          class="wineinput"
+          id="wineinput2"
+          type="number"
+          placeholder="aantal flessen"
+        />
+        Muscadet
+      </label>
+    </div>
+    <p id="cart">your order</p>
+    <p id="cart2">your order</p>
+    <script>
+      function bestelFunctie1() {
+        var x = document.getElementById('wineinput1').value;
+        document.getElementById('cart').innerHTML =
+          'You selected: ' + x + ' bottles of Bordeaux ';
+      }
+    </script>
+    <script>
+      function bestelFunctie2() {
+        var x = document.getElementById('wineinput2').value;
+        document.getElementById('cart2').innerHTML =
+          'You selected: ' + x + ' bottles of Muscadet ';
+      }
+    </script>
+  </body>
+</html>

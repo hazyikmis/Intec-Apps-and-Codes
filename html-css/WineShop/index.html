@@ -3,23 +3,234 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Tangerine:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <title>Document</title>
   </head>
   <body>
     <div class="container">
       <div class="top">
         <div class="top-left">top-left</div>
-        <div class="top-middle">top-middle</div>
+        <div class="top-middle">Rest-en-Round</div>
         <div class="top-right">top-right</div>
       </div>
       <div class="menu-top">menu-top</div>
       <div class="menu">
-        <div class="red-wines">red-wines</div>
-        <div class="white-wines">white-wines</div>
-        <div class="merlot">merlot</div>
-        <div class="sparkling">sparkling</div>
-        <div class="rose-riesling">rose-riesling</div>
+        <div class="wine-group red-wines">
+          <div class="title">Red Wines</div>
+          <div class="product">
+            <span class="brand">France</span><span class="price">29.9</span>
+            <span class="span-buttons">
+              <button class="dec-btn" id="dec-rw-fr">-</button>
+              <span class="order" id="amt-rw-fr">0</span>
+              <button class="inc-btn" id="inc-rw-fr">+</button>
+            </span>
+          </div>
+          <div class="product">
+            <span class="brand">Italy</span><span class="price">19.5</span>
+            <span class="span-buttons">
+              <button class="dec-btn" id="dec-rw-it">-</button>
+              <span class="order" id="amt-rw-it">0</span>
+              <button class="inc-btn" id="inc-rw-it">+</button>
+            </span>
+          </div>
+          <div class="product">
+            <span class="brand">Spain</span><span class="price">15.8</span>
+            <span class="span-buttons">
+              <button class="dec-btn" id="dec-rw-sp">-</button>
+              <span class="order" id="amt-rw-sp">0</span>
+              <button class="inc-btn" id="inc-rw-sp">+</button>
+            </span>
+          </div>
+          <div class="product">
+            <span class="brand">Georgia</span><span class="price">18.9</span>
+            <span class="span-buttons">
+              <button class="dec-btn" id="dec-rw-ge">-</button>
+              <span class="order" id="amt-rw-ge">0</span>
+              <button class="inc-btn" id="inc-rw-ge">+</button>
+            </span>
+          </div>
+          <div class="product">
+            <span class="brand">Argentina</span><span class="price">14.6</span>
+            <span class="span-buttons">
+              <button class="dec-btn" id="dec-rw-ar">-</button>
+              <span class="order" id="amt-rw-ar">0</span>
+              <button class="inc-btn" id="inc-rw-ar">+</button>
+            </span>
+          </div>
+        </div>
+        <div class="wine-group white-wines">
+          <div class="title">White Wines</div>
+          <div class="product">
+            <span class="brand">Sauvignon</span><span class="price">29.9</span>
+            <span class="span-buttons">
+              <button class="dec-btn" id="dec-ww-sa">-</button>
+              <span class="order" id="amt-ww-sa">0</span>
+              <button class="inc-btn" id="inc-ww-sa">+</button>
+            </span>
+          </div>
+          <div class="product">
+            <span class="brand">Chardonnay</span><span class="price">19.5</span>
+            <span class="span-buttons">
+              <button class="dec-btn" id="dec-ww-ch">-</button>
+              <span class="order" id="amt-ww-ch">0</span>
+              <button class="inc-btn" id="inc-ww-ch">+</button>
+            </span>
+          </div>
+          <div class="product">
+            <span class="brand">Lux Chardonnay</span
+            ><span class="price">15.8</span>
+            <span class="span-buttons">
+              <button class="dec-btn" id="dec-ww-lc">-</button>
+              <span class="order" id="amt-ww-lc">0</span>
+              <button class="inc-btn" id="inc-ww-lc">+</button>
+            </span>
+          </div>
+          <div class="product">
+            <span class="brand">Pinot Cris</span><span class="price">18.9</span>
+            <span class="span-buttons">
+              <button class="dec-btn" id="dec-ww-pc">-</button>
+              <span class="order" id="amt-ww-pc">0</span>
+              <button class="inc-btn" id="inc-xw-pc">+</button>
+            </span>
+          </div>
+        </div>
+        <div class="wine-group merlot">
+          <div class="title">Merlot</div>
+          <div class="product">
+            <span class="brand">Australia</span><span class="price">29.9</span>
+            <span class="span-buttons">
+              <button class="dec-btn" id="dec-me-au">-</button>
+              <span class="order" id="amt-me-au">0</span>
+              <button class="inc-btn" id="inc-me-au">+</button>
+            </span>
+          </div>
+          <div class="product">
+            <span class="brand">New Zealand</span
+            ><span class="price">19.5</span>
+            <span class="span-buttons">
+              <button class="dec-btn" id="dec-me-nz">-</button>
+              <span class="order" id="amt-me-nz">0</span>
+              <button class="inc-btn" id="inc-me-nz">+</button>
+            </span>
+          </div>
+        </div>
+        <div class="wine-group rose-riesling">
+          <div class="title">Rose & Riesling</div>
+          <div class="product">
+            <span class="brand">Spain</span><span class="price">29.9</span>
+            <span class="span-buttons">
+              <button class="dec-btn" id="dec-rr-sp">-</button>
+              <span class="order" id="amt-rr-sp">0</span>
+              <button class="inc-btn" id="inc-rr-sp">+</button>
+            </span>
+          </div>
+          <div class="product">
+            <span class="brand">Italy</span><span class="price">19.5</span>
+            <span class="span-buttons">
+              <button class="dec-btn" id="dec-rr-it">-</button>
+              <span class="order" id="amt-rr-it">0</span>
+              <button class="inc-btn" id="inc-rr-it">+</button>
+            </span>
+          </div>
+          <div class="product">
+            <span class="brand">France</span><span class="price">15.8</span>
+            <span class="span-buttons">
+              <button class="dec-btn" id="dec-rr-fr">-</button>
+              <span class="order" id="amt-rr-fr">0</span>
+              <button class="inc-btn" id="inc-rr-fr">+</button>
+            </span>
+          </div>
+          <div class="product">
+            <span class="brand">Georgia</span><span class="price">18.9</span>
+            <span class="span-buttons">
+              <button class="dec-btn" id="dec-rr-ge">-</button>
+              <span class="order" id="amt-rr-ge">0</span>
+              <button class="inc-btn" id="inc-rr-ge">+</button>
+            </span>
+          </div>
+        </div>
+        <div class="wine-group sparkling">
+          <div class="title">Sparkling</div>
+          <div class="product">
+            <span class="brand">Sparkling Rose</span
+            ><span class="price">29.9</span>
+            <span class="span-buttons">
+              <button class="dec-btn" id="dec-sp-ro">-</button>
+              <span class="order" id="amt-sp-ro">0</span>
+              <button class="inc-btn" id="inc-sp-ro">+</button>
+            </span>
+          </div>
+          <div class="product">
+            <span class="brand">Sweet Sparkling</span
+            ><span class="price">19.5</span>
+            <span class="span-buttons">
+              <button class="dec-btn" id="dec-sp-ss">-</button>
+              <span class="order" id="amt-sp-ss">0</span>
+              <button class="inc-btn" id="inc-sp-ss">+</button>
+            </span>
+          </div>
+          <div class="product">
+            <span class="brand">Moscato</span><span class="price">15.8</span>
+            <span class="span-buttons">
+              <button class="dec-btn" id="dec-sp-mo">-</button>
+              <span class="order" id="amt-sp-mo">0</span>
+              <button class="inc-btn" id="inc-sp-mo">+</button>
+            </span>
+          </div>
+          <div class="product">
+            <span class="brand">Sparkling Red</span
+            ><span class="price">18.9</span>
+            <span class="span-buttons">
+              <button class="dec-btn" id="dec-sp-sr">-</button>
+              <span class="order" id="amt-sp-sr">0</span>
+              <button class="inc-btn" id="inc-sp-sr">+</button>
+            </span>
+          </div>
+          <div class="product">
+            <span class="brand">Lus Sparkling</span
+            ><span class="price">14.6</span>
+            <span class="span-buttons">
+              <button class="dec-btn" id="dec-sp-ls">-</button>
+              <span class="order" id="amt-sp-ls">0</span>
+              <button class="inc-btn" id="inc-sp-ls">+</button>
+            </span>
+          </div>
+          <div class="product">
+            <span class="brand">Champagne</span><span class="price">15.8</span>
+            <span class="span-buttons">
+              <button class="dec-btn" id="dec-sp-ch">-</button>
+              <span class="order" id="amt-sp-ch">0</span>
+              <button class="inc-btn" id="inc-sp-ch">+</button>
+            </span>
+          </div>
+          <div class="product">
+            <span class="brand">Almond</span><span class="price">15.8</span>
+            <span class="span-buttons">
+              <button class="dec-btn" id="dec-sp-al">-</button>
+              <span class="order" id="amt-sp-al">0</span>
+              <button class="inc-btn" id="inc-sp-al">+</button>
+            </span>
+          </div>
+          <div class="product">
+            <span class="brand">Sparkling Wine</span
+            ><span class="price">15.8</span>
+            <span class="span-buttons">
+              <button class="dec-btn" id="dec-sp-sw">-</button>
+              <span class="order" id="amt-sp-sw">0</span>
+              <button class="inc-btn" id="inc-sp-sw">+</button>
+            </span>
+          </div>
+        </div>
       </div>
       <div class="bottom">
         <div class="bottom-left">bottom-left</div>
